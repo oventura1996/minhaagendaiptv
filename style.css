@@ -338,7 +338,10 @@
         }
 
         /* Responsividade básica */
-        
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
 
             form button {
                 grid-column: span 1;
@@ -393,79 +396,3 @@
             }
         }
     
-
-
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-        align-items: center;
-    }
-
-    .container,
-    #loginScreen .login-box {
-        padding: 20px;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    form {
-        grid-template-columns: 1fr;
-    }
-
-    form button {
-        width: 100%;
-        grid-column: span 1;
-    }
-
-    .actions-header {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    .filter-options,
-    .security-toggle,
-    .logout-container {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .filter-options button,
-    .security-toggle button,
-    .logout-button {
-        width: 100%;
-    }
-
-    #subscriberList li {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    #subscriberList li span {
-        width: 100%;
-        margin: 0 0 5px 0;
-        font-size: 0.95em;
-    }
-
-    .list-actions {
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 10px;
-        flex-wrap: wrap;
-    }
-
-    .alert-button,
-    .notice-button,
-    .delete-button {
-        width: 100%;
-        margin: 4px 0;
-        font-size: 0.95em;
-        padding: 10px;
-    }
-}
