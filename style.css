@@ -1,0 +1,398 @@
+
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 150px; /* Ajuste o tamanho da sua logo aqui */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="password"] { /* Adicionado estilo para input de senha */
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group-checkbox {
+            grid-column: span 2; /* Ocupa as duas colunas */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-group-checkbox input[type="checkbox"] {
+            width: auto; /* Não ocupa 100% da largura */
+        }
+
+        form button {
+            grid-column: span 2;
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+        .actions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .filter-options button,
+        .security-toggle button,
+        .logout-button { /* Adicionado estilo para o botão de sair */
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-options button:hover,
+        .security-toggle button:hover,
+        .logout-button:hover { /* Adicionado estilo de hover para o botão de sair */
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            background-color: #6c757d; /* Cor diferente para o botão de sair */
+        }
+
+        .logout-button:hover {
+            background-color: #5a6268;
+        }
+
+        #subscriberList {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        #subscriberList li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #subscriberList li.due-soon {
+            background-color: #ffe0e0;
+            border-color: #ffb3b3;
+        }
+
+        #subscriberList li span {
+            flex-grow: 1;
+            margin-right: 10px;
+            min-width: 120px;
+        }
+
+        #subscriberList li .name,
+        #subscriberList li .phone {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        /* Estilo para esconder os dados sensíveis */
+        #subscriberList li.hide-data .name,
+        #subscriberList li.hide-data .phone {
+            background-color: #ccc;
+            color: #ccc;
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
+
+        #subscriberList li .due-date,
+        #subscriberList li .start-date {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        #subscriberList li .is-monthly {
+            font-weight: bold;
+            color: #007bff; /* Cor para indicar mensal */
+            font-size: 0.9em;
+        }
+
+
+        .list-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .alert-button {
+            padding: 8px 12px;
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .alert-button:hover {
+            background-color: #138496;
+        }
+
+        .notice-button {
+            padding: 8px 12px;
+            background-color: #ffc107;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .notice-button:hover {
+            background-color: #e0a800;
+        }
+
+        .delete-button {
+            padding: 8px 12px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para a tela de login */
+        #loginScreen {
+            display: flex; /* Inicialmente visível */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f7f6;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Garante que a tela de login esteja acima de tudo */
+        }
+
+        #loginScreen .login-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        #loginScreen .login-box h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        #loginScreen .login-box .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative; /* Para posicionar o toggle da senha */
+        }
+
+        #loginScreen .login-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #loginScreen .login-box input[type="text"],
+        #loginScreen .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #loginScreen .login-box .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 0.9em;
+            color: #007bff;
+            user-select: none; /* Impede seleção de texto */
+        }
+
+        #loginScreen .login-box button {
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #loginScreen .login-box button:hover {
+            background-color: #218838;
+        }
+
+        #loginScreen .login-error {
+            color: #dc3545;
+            margin-top: 10px;
+            font-weight: bold;
+            display: none; /* Escondido por padrão */
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            form button {
+                grid-column: span 1;
+            }
+
+            .actions-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-options,
+            .security-toggle,
+            .logout-container { /* Adicionado para responsividade do logout */
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .filter-options button,
+            .security-toggle button,
+            .logout-button { /* Adicionado para responsividade do logout */
+                width: calc(50% - 7.5px);
+            }
+
+            #subscriberList li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #subscriberList li span {
+                width: 100%;
+                text-align: left;
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .list-actions {
+                width: 100%;
+                justify-content: space-around;
+                margin-top: 10px;
+            }
+
+            .alert-button,
+            .notice-button,
+            .delete-button {
+                width: calc(33% - 6px);
+                font-size: 0.8em;
+                padding: 10px 5px;
+            }
+
+            #loginScreen .login-box {
+                padding: 20px;
+            }
+        }
+    
